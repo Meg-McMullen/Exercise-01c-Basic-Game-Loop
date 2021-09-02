@@ -36,14 +36,14 @@ while True:
 
     # Find passage (update)
     current_location = {}
-    for passage in world["passage"]:
-      if passage("name") == current:
+    for passage in world["passages"]:
+      if passage["name"] == current:
         current_location = passage
 
     # Display passage (render the world)
     print(current_location["name"])
     print(current_location["cleanText"])
-    for Link in current_location["Links"]:
+    for link in current_location["links"]:
       print(link["linkText"])
 
     # Ask for response (get input)
